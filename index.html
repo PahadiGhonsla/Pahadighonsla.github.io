@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pahadi घोंसला | A Place to Pause in Bhimtal</title>
-
     <meta name="description" content="Looking for a peaceful mountain retreat? Pahadi घोंसला is a premium earthy homestay near Bhimtal Lake & Kainchi Dham. Ideal for families, couples, and creative retreats. Book your stay today!">
     
     <link rel="icon" type="image/png" href="favicon.png"> 
@@ -15,193 +14,517 @@
 
     <style>
         :root {
-            /* Earthy & Nature-Inspired Theme Colors based on Logo */
-            --forest-green: #2a4b3c; /* Deep earthy green */
-            --earth-brown: #8b5a2b; /* Warm wood/nest brown */
-            --light-cream: #f7f5f0; /* Soft off-white for background */
+            --forest-green: #2a4b3c;
+            --earth-brown: #8b5a2b;
+            --light-cream: #f7f5f0;
             --white: #ffffff; 
             --text-dark: #333333; 
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; background: var(--light-cream); color: var(--text-dark); line-height: 1.6; scroll-behavior: smooth; }
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
 
-        /* HEADER */
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background: var(--light-cream); 
+            color: var(--text-dark); 
+            line-height: 1.75; 
+            scroll-behavior: smooth; 
+        }
+
+        /* HEADER - Cleaner spacing */
         header {
-            position: fixed; top: 0; width: 100%;
+            position: fixed; 
+            top: 0; 
+            width: 100%;
             background: rgba(247, 245, 240, 0.98);
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 15px 60px; z-index: 1000;
-            border-bottom: 1px solid rgba(139, 90, 43, 0.15);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            padding: 18px 50px; 
+            z-index: 1000;
+            border-bottom: 1px solid rgba(139, 90, 43, 0.12);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
         }
         header h1 {
-            font-family: 'Playfair Display', serif; font-size: 22px;
-            display: flex; align-items: center; justify-content: center;
+            font-family: 'Playfair Display', serif; 
+            font-size: 22px;
+            display: flex; 
+            align-items: center;
         }
         .header-logo-img { height: 35px; margin-right: 10px; }
         .color-green { color: var(--forest-green); }
         .color-brown { color: var(--earth-brown); }
         
+        header nav {
+            display: flex;
+            gap: 22px;
+            align-items: center;
+        }
         header nav a {
-            margin: 0 12px; text-decoration: none; color: var(--text-dark);
-            font-weight: 500; font-size: 12px; text-transform: uppercase;
-            letter-spacing: 1px; transition: 0.3s;
+            text-decoration: none; 
+            color: var(--text-dark);
+            font-weight: 500; 
+            font-size: 12.5px; 
+            text-transform: uppercase;
+            letter-spacing: 0.8px; 
+            transition: 0.3s;
         }
         header nav a:hover { color: var(--earth-brown); }
 
-        /* HERO SECTION */
+        /* HERO - Better vertical balance + subtle subtitle */
         .hero {
             height: 100vh;
-            background: var(--light-cream); /* Removed the bad image, keeping warm background */
-            display: flex; align-items: center; justify-content: center; text-align: center;
-            padding-top: 60px;
+            background: var(--light-cream);
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center;
+            padding-top: 82px;
         }
         .hero-content {
-            display: flex; flex-direction: column; align-items: center;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center;
         }
         .hero-logo {
-            width: 280px; max-width: 80%; margin-bottom: 25px;
-            animation: float 4s ease-in-out infinite;
+            width: 280px; 
+            max-width: 80%; 
+            margin-bottom: 18px;
+            animation: float 4.2s ease-in-out infinite;
         }
         @keyframes float {
             0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            50% { transform: translateY(-8px); }
             100% { transform: translateY(0px); }
         }
-        .hero h2 { font-family: 'Playfair Display', serif; font-size: 32px; font-style: italic; color: var(--forest-green); margin-bottom: 15px; font-weight: 400; }
+        .hero h2 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 32px; 
+            font-style: italic; 
+            color: var(--forest-green); 
+            margin-bottom: 10px; 
+            font-weight: 400; 
+        }
+        .hero-subtitle {
+            font-size: 17px;
+            color: #555;
+            max-width: 520px;
+            line-height: 1.65;
+            margin-bottom: 32px;
+        }
         
         .cta-btn {
-            padding: 15px 40px; border: 1px solid var(--earth-brown); background: var(--earth-brown);
-            color: white; text-transform: uppercase; letter-spacing: 2px; cursor: pointer;
-            transition: 0.4s; font-size: 12px; display: inline-block; text-decoration: none; border-radius: 30px;
+            padding: 13px 36px; 
+            border: 1px solid var(--earth-brown); 
+            background: var(--earth-brown);
+            color: white; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            cursor: pointer;
+            transition: 0.4s; 
+            font-size: 12.5px; 
+            display: inline-block; 
+            text-decoration: none; 
+            border-radius: 28px;
         }
-        .cta-btn:hover { background: transparent; color: var(--earth-brown); }
+        .cta-btn:hover { 
+            background: transparent; 
+            color: var(--earth-brown); 
+            border-color: var(--earth-brown);
+        }
 
-        /* SECTION STYLING */
-        section { padding: 90px 60px; max-width: 1400px; margin: auto; }
+        /* SECTION BASE - Consistent rhythm */
+        section { 
+            padding: 88px 50px; 
+            max-width: 1400px; 
+            margin: auto; 
+        }
         .section-title {
-            text-align: center; font-family: 'Playfair Display', serif; font-size: 36px;
-            margin-bottom: 50px; font-weight: 400; color: var(--forest-green);
+            text-align: center; 
+            font-family: 'Playfair Display', serif; 
+            font-size: 36px;
+            margin-bottom: 44px; 
+            font-weight: 400; 
+            color: var(--forest-green);
         }
         .section-title::after {
-            content: ''; display: block; width: 50px; height: 2px; background: var(--earth-brown); margin: 20px auto; border-radius: 2px;
+            content: ''; 
+            display: block; 
+            width: 48px; 
+            height: 2px; 
+            background: var(--earth-brown); 
+            margin: 18px auto; 
+            border-radius: 2px;
         }
 
-        /* GALLERIES */
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .gallery-item { position: relative; overflow: hidden; height: 350px; cursor: pointer; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
-        .gallery-item:hover img { transform: scale(1.08); }
+        /* GALLERIES - Balanced gaps + subtle hover */
+        .gallery { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 24px; 
+        }
+        .gallery-item { 
+            position: relative; 
+            overflow: hidden; 
+            height: 360px; 
+            cursor: pointer; 
+            border-radius: 12px; 
+            box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+        }
+        .gallery img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            transition: transform 0.75s ease; 
+        }
+        .gallery-item:hover img { 
+            transform: scale(1.04); 
+        }
         .img-overlay {
-            position: absolute; bottom: 0; left: 0; width: 100%; padding: 25px 20px;
-            background: linear-gradient(transparent, rgba(42, 75, 60, 0.9));
-            color: white; font-family: 'Playfair Display', serif; font-size: 18px;
+            position: absolute; 
+            bottom: 0; 
+            left: 0; 
+            width: 100%; 
+            padding: 24px 20px;
+            background: linear-gradient(transparent, rgba(42, 75, 60, 0.88));
+            color: white; 
+            font-family: 'Playfair Display', serif; 
+            font-size: 18px;
         }
 
-        /* CARDS (Pricing & Nearby) */
-        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
-        .luxury-card, .trust-item {
-            background: var(--white); padding: 40px 25px; text-align: center;
-            border-radius: 12px; transition: 0.4s; border: 1px solid rgba(139, 90, 43, 0.1);
+        /* CARDS - Softer, balanced, equal height feel */
+        .grid-container { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+            gap: 28px; 
         }
-        .luxury-card:hover, .trust-item:hover { border-color: var(--earth-brown); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(42, 75, 60, 0.08); }
-        .luxury-card h3 { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--forest-green); }
-        .luxury-card p { font-size: 14px; color: #666; margin-bottom: 10px; }
-        .price-tag { font-size: 20px; margin-top: 15px; display: block; font-weight: 600; color: var(--earth-brown); }
-        .guest-info { font-size: 13px; color: var(--forest-green); font-style: italic; }
+        .luxury-card, .trust-item {
+            background: var(--white); 
+            padding: 34px 24px; 
+            text-align: center;
+            border-radius: 12px; 
+            transition: all 0.35s ease; 
+            border: 1px solid rgba(139, 90, 43, 0.08);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.035);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .luxury-card:hover, .trust-item:hover { 
+            border-color: var(--earth-brown); 
+            transform: translateY(-3px); 
+            box-shadow: 0 6px 16px rgba(42, 75, 60, 0.06); 
+        }
+        .luxury-card h3 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 22px; 
+            margin-bottom: 10px; 
+            color: var(--forest-green); 
+        }
+        .luxury-card p { 
+            font-size: 14px; 
+            color: #666; 
+            margin-bottom: 8px; 
+            flex-grow: 1;
+        }
+        .price-tag { 
+            font-size: 20px; 
+            margin-top: 14px; 
+            display: block; 
+            font-weight: 600; 
+            color: var(--earth-brown); 
+        }
+        .guest-info { 
+            font-size: 13px; 
+            color: var(--forest-green); 
+            font-style: italic; 
+            margin-top: auto;
+        }
 
         /* AMENITIES */
-        .amenities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 30px; text-align: center; }
-        .amenity-item i { font-size: 35px; color: var(--earth-brown); margin-bottom: 15px; display: block; }
-        .amenity-item p { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; font-weight: 500; }
+        .amenities-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+            gap: 32px; 
+            text-align: center; 
+        }
+        .amenity-item i { 
+            font-size: 35px; 
+            color: var(--earth-brown); 
+            margin-bottom: 14px; 
+            display: block; 
+        }
+        .amenity-item p { 
+            font-size: 13px; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            font-weight: 500; 
+        }
 
-        /* HOST SECTION */
-        .host-container { display: flex; align-items: center; gap: 60px; background: var(--white); padding: 50px; border-radius: 16px; border: 1px solid rgba(139, 90, 43, 0.1); }
-        .host-image { flex: 1; min-width: 300px; height: 400px; }
-        .host-image img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
-        .host-content { flex: 2; }
-        .host-content h3 { font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 20px; color: var(--forest-green); }
+        /* EXPERIENCES - Fixed grid */
+        .experience-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 26px; 
+        }
+        .exp-card { 
+            position: relative; 
+            height: 350px; 
+            overflow: hidden; 
+            border-radius: 12px; 
+        }
+        .exp-card img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            transition: 0.7s ease; 
+        }
+        .exp-overlay { 
+            position: absolute; 
+            inset: 0; 
+            background: linear-gradient(to top, rgba(0,0,0,0.78), transparent); 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: flex-end; 
+            padding: 28px; 
+            color: white; 
+        }
 
-        /* EXPERIENCES & DIARIES */
-        .exp-card { position: relative; height: 350px; overflow: hidden; border-radius: 12px; }
-        .exp-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s ease; }
-        .exp-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); display: flex; flex-direction: column; justify-content: flex-end; padding: 30px; color: white; }
-        .diary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .diary-card { background: var(--white); padding: 40px; border-radius: 12px; border-left: 4px solid var(--earth-brown); }
+        /* HOST - Warmer, personal spacing */
+        .host-container { 
+            display: flex; 
+            align-items: center; 
+            gap: 52px; 
+            background: var(--white); 
+            padding: 48px; 
+            border-radius: 16px; 
+            border: 1px solid rgba(139, 90, 43, 0.08);
+        }
+        .host-image { 
+            flex: 1; 
+            min-width: 300px; 
+            height: 400px; 
+        }
+        .host-image img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            border-radius: 12px; 
+        }
+        .host-content { 
+            flex: 2; 
+        }
+        .host-content h3 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 32px; 
+            margin-bottom: 18px; 
+            color: var(--forest-green); 
+        }
 
-        /* CONTACT FORM */
-        .contact-box { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; background: var(--white); padding: 40px; border-radius: 16px; border: 1px solid rgba(139, 90, 43, 0.1); }
-        
-        /* FLOATING ACTION */
-        .whatsapp, .call { position: fixed; right: 25px; width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: white; font-size: 24px; z-index: 999; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-        .whatsapp { bottom: 95px; background: #25d366; }
-        .call { bottom: 25px; background: var(--earth-brown); }
+        /* DIARIES & UPDATES */
+        .diary-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; 
+        }
+        .diary-card { 
+            background: var(--white); 
+            padding: 36px; 
+            border-radius: 12px; 
+            border-left: 4px solid var(--earth-brown); 
+        }
 
-        /* FOOTER */
-        footer { background: var(--forest-green); color: var(--light-cream); padding: 80px 20px; text-align: center; }
-        footer h2 { font-family: 'Playfair Display', serif; font-size: 28px; letter-spacing: 3px; margin-bottom: 20px; display: flex; justify-content: center; align-items: center;}
+        /* CONTACT */
+        .contact-box { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 42px; 
+            background: var(--white); 
+            padding: 42px; 
+            border-radius: 16px; 
+            border: 1px solid rgba(139, 90, 43, 0.08);
+        }
+
+        /* FLOATING */
+        .whatsapp, .call { 
+            position: fixed; 
+            right: 24px; 
+            width: 54px; 
+            height: 54px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            border-radius: 50%; 
+            color: white; 
+            font-size: 24px; 
+            z-index: 999; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.18); 
+        }
+        .whatsapp { bottom: 92px; background: #25d366; }
+        .call { bottom: 24px; background: var(--earth-brown); }
+
+        /* FOOTER - Compact & balanced */
+        footer { 
+            background: var(--forest-green); 
+            color: var(--light-cream); 
+            padding: 62px 20px; 
+            text-align: center; 
+        }
+        footer h2 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 28px; 
+            letter-spacing: 3px; 
+            margin-bottom: 16px; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
         footer a { color: inherit; text-decoration: none; }
-        .premium-socials { display: flex; justify-content: center; gap: 30px; margin-bottom: 30px; }
-        .premium-socials a { font-size: 24px; width: 45px; height: 45px; border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s; }
-        .premium-socials a:hover { background: var(--earth-brown); border-color: var(--earth-brown); }
+        .premium-socials { 
+            display: flex; 
+            justify-content: center; 
+            gap: 26px; 
+            margin-bottom: 26px; 
+        }
+        .premium-socials a { 
+            font-size: 24px; 
+            width: 44px; 
+            height: 44px; 
+            border: 1px solid rgba(255,255,255,0.22); 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            transition: 0.3s; 
+        }
+        .premium-socials a:hover { 
+            background: var(--earth-brown); 
+            border-color: var(--earth-brown); 
+        }
 
         /* LIGHTBOX */
-        #lightbox { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(26, 36, 33, 0.95); align-items:center; justify-content:center; z-index:2000; }
-        #lightbox img { max-width: 90%; max-height: 85%; border-radius: 8px; }
-        .close { position:absolute; top:20px; right:30px; color:white; font-size:50px; cursor:pointer; font-weight: 300; }
-        .nav-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.1); color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 20px; transition: 0.3s; }
+        #lightbox { 
+            display:none; 
+            position:fixed; 
+            top:0; left:0; 
+            width:100%; height:100%; 
+            background:rgba(26, 36, 33, 0.95); 
+            align-items:center; 
+            justify-content:center; 
+            z-index:2000; 
+        }
+        #lightbox img { 
+            max-width: 90%; 
+            max-height: 85%; 
+            border-radius: 8px; 
+        }
+        .close { 
+            position:absolute; 
+            top:20px; right:30px; 
+            color:white; 
+            font-size:50px; 
+            cursor:pointer; 
+            font-weight: 300; 
+        }
+        .nav-btn { 
+            position: absolute; 
+            top: 50%; 
+            transform: translateY(-50%); 
+            background: rgba(255,255,255,0.12); 
+            color: white; 
+            border: none; 
+            width: 48px; 
+            height: 48px; 
+            border-radius: 50%; 
+            cursor: pointer; 
+            font-size: 20px; 
+            transition: 0.3s; 
+        }
         .nav-btn:hover { background: var(--earth-brown); }
         .prev-btn { left: 20px; }
         .next-btn { right: 20px; }
 
-        /* --- PERFECT MOBILE RESPONSIVE GRIDS --- */
+        /* MOBILE RESPONSIVENESS - Perfected alignment & breathing room */
         @media (max-width: 768px) {
-            header { padding: 10px 15px; flex-direction: column; gap: 10px; }
-            header nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; }
-            header nav a { font-size: 10px; margin: 2px 5px; }
-            section { padding: 60px 15px; }
+            header { 
+                padding: 14px 16px; 
+                flex-direction: column; 
+                gap: 12px; 
+            }
+            header nav { 
+                gap: 10px; 
+            }
+            header nav a { 
+                font-size: 11px; 
+                margin: 0; 
+            }
+            
+            section { padding: 64px 18px; }
 
             .hero h2 { font-size: 26px; }
             .hero-logo { width: 220px; }
+            .hero-subtitle { font-size: 15.5px; max-width: 340px; margin-bottom: 26px; }
 
-            /* 2-Column Grid for Galleries */
-            .gallery { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-            .gallery-item { height: 180px; border-radius: 8px; }
-            .img-overlay { padding: 15px 10px; font-size: 12px; }
+            .gallery { 
+                grid-template-columns: repeat(2, 1fr); 
+                gap: 14px; 
+            }
+            .gallery-item { height: 190px; border-radius: 8px; }
 
-            /* 2-Column Grid for Pricing & Nearby */
-            .grid-container { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-            .luxury-card, .trust-item { padding: 20px 10px; border-radius: 8px; }
-            .luxury-card h3 { font-size: 15px; margin-bottom: 5px; line-height: 1.3; }
-            .luxury-card p { font-size: 11px; margin-bottom: 5px; }
-            .price-tag { font-size: 15px; margin-top: 8px; }
-            .guest-info { font-size: 10px; }
-            
-            .trust-item h4 { font-size: 16px; }
-            .trust-item p { font-size: 11px; }
+            .grid-container { 
+                grid-template-columns: repeat(2, 1fr); 
+                gap: 16px; 
+            }
+            .luxury-card, .trust-item { 
+                padding: 22px 16px; 
+            }
+            .luxury-card h3 { font-size: 16px; }
+            .price-tag { font-size: 16px; }
 
-            /* 3-Column Grid for Amenities */
-            .amenities-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
-            .amenity-item { padding: 10px; }
-            .amenity-item i { font-size: 24px; margin-bottom: 8px; }
-            .amenity-item p { font-size: 9px; }
+            .amenities-grid { 
+                grid-template-columns: repeat(3, 1fr); 
+                gap: 18px; 
+            }
+            .amenity-item i { font-size: 26px; }
+            .amenity-item p { font-size: 10.5px; }
 
-            /* Experiences & Diaries */
-            .experience-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-            .exp-card { height: 200px; }
-            .exp-card h4 { font-size: 16px; }
-            .exp-card p { font-size: 11px; }
-            .diary-card { padding: 20px; }
+            .experience-grid { 
+                grid-template-columns: repeat(2, 1fr); 
+                gap: 14px; 
+            }
+            .exp-card { height: 210px; }
 
-            /* Host Image Fix (No Stretching) */
-            .host-container { flex-direction: column; padding: 25px 15px; text-align: center; }
-            .host-image { width: 100%; max-width: 250px; height: auto; min-width: auto; margin: 0 auto; }
-            .host-image img { aspect-ratio: 4/5; object-fit: cover; }
-            .host-content h3 { font-size: 24px; }
+            .host-container { 
+                flex-direction: column; 
+                padding: 28px 18px; 
+                gap: 28px; 
+                text-align: center; 
+            }
+            .host-image { 
+                width: 100%; 
+                max-width: 260px; 
+                height: auto; 
+                min-width: auto; 
+            }
+            .host-image img { aspect-ratio: 4/5; }
 
-            /* Contact */
-            .contact-box { grid-template-columns: 1fr; padding: 20px; gap: 20px; }
+            .contact-box { 
+                grid-template-columns: 1fr; 
+                padding: 24px; 
+                gap: 24px; 
+            }
+
+            .diary-card { padding: 24px; }
         }
     </style>
 </head>
@@ -227,6 +550,7 @@
     <div class="hero-content">
         <img src="logo.png" alt="Pahadi Ghonsla Logo" class="hero-logo">
         <h2>A place to pause</h2>
+        <p class="hero-subtitle">Where the hills invite you to slow down and simply be.</p>
         <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView()">Plan Your Stay</button>
     </div>
 </div>
@@ -254,19 +578,19 @@
     <h2 class="section-title">Inside the Nest</h2>
     <div class="gallery">
         <div class="gallery-item" onclick="openLightbox('master')">
-            <img src="master1.jpg" alt="Kudrat Kutir Room">
+            <img src="master1.jpg" alt="Kudrat Kutir Room" loading="lazy">
             <div class="img-overlay">Kudrat Kutir (कुदरत कुटीर)</div>
         </div>
         <div class="gallery-item" onclick="openLightbox('bed2')">
-            <img src="bedroom2-1.jpg" alt="Pyaar ke Panchhi Room">
+            <img src="bedroom2-1.jpg" alt="Pyaar ke Panchhi Room" loading="lazy">
             <div class="img-overlay">Pyaar ke Panchhi (प्यार के पंछी)</div>
         </div>
         <div class="gallery-item" onclick="openLightbox('living')">
-            <img src="living1.jpg" alt="Living Area">
+            <img src="living1.jpg" alt="Living Area" loading="lazy">
             <div class="img-overlay">Living & Dining Area</div>
         </div>
         <div class="gallery-item" onclick="openLightbox('balcony')">
-            <img src="balcony1.jpg" alt="Balcony View">
+            <img src="balcony1.jpg" alt="Balcony View" loading="lazy">
             <div class="img-overlay">Private Balcony View</div>
         </div>
     </div>
@@ -275,10 +599,10 @@
 <section id="surroundings">
     <h2 class="section-title">Around the Nest</h2>
     <div class="gallery">
-        <div class="gallery-item" onclick="openLightbox('surround')"><img src="sur1.jpg" alt="View 1"></div>
-        <div class="gallery-item" onclick="openLightbox('surround')"><img src="sur2.jpg" alt="View 2"></div>
-        <div class="gallery-item" onclick="openLightbox('surround')"><img src="sur3.jpg" alt="View 3"></div>
-        <div class="gallery-item" onclick="openLightbox('surround')"><img src="sur4.jpg" alt="View 4"></div>
+        <div class="gallery-item" onclick="openLightbox('surround')"><img src="sur1.jpg" alt="View 1" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox('surround')"><img src="sur2.jpg" alt="View 2" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox('surround')"><img src="sur3.jpg" alt="View 3" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox('surround')"><img src="sur4.jpg" alt="View 4" loading="lazy"></div>
     </div>
 </section>
 
@@ -317,21 +641,21 @@
     <h2 class="section-title">Curated Experiences</h2>
     <div class="experience-grid">
         <div class="exp-card">
-            <img src="sur1.jpg" alt="Bonfire"> 
+            <img src="sur1.jpg" alt="Bonfire" loading="lazy"> 
             <div class="exp-overlay">
                 <h4>Bonfire Nights</h4>
                 <p>Warmth & Starry Skies</p>
             </div>
         </div>
         <div class="exp-card">
-            <img src="sur2.jpg" alt="Trek"> 
+            <img src="sur2.jpg" alt="Trek" loading="lazy"> 
             <div class="exp-overlay">
                 <h4>Nature Walks</h4>
                 <p>Explore Hidden Trails</p>
             </div>
         </div>
         <div class="exp-card">
-            <img src="sur3.jpg" alt="Food"> 
+            <img src="sur3.jpg" alt="Food" loading="lazy"> 
             <div class="exp-overlay">
                 <h4>Kumaoni Flavors</h4>
                 <p>Home-Cooked Meals</p>
@@ -343,7 +667,7 @@
 <section id="host">
     <div class="host-container">
         <div class="host-image">
-            <img src="Ayaan.jpg" alt="Host of Pahadi घोंसला"> 
+            <img src="Ayaan.jpg" alt="Host of Pahadi घोंसला" loading="lazy"> 
         </div>
         <div class="host-content">
             <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 11px; margin-bottom: 10px; color: var(--earth-brown);">Meet Your Host</p>
@@ -417,7 +741,7 @@
             <h3 style="font-family:'Playfair Display',serif; font-size:24px; margin-bottom:15px; color: var(--forest-green);">
                 Plan Your Stay
             </h3>
-            <p style="font-size:14px; color:#555; line-height:1.6; margin-bottom: 20px;">
+            <p style="font-size:14px; color:#555; line-height:1.75; margin-bottom: 20px;">
                 Share your preferred dates and number of guests. We’ll prepare the nest for you.
             </p>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScuDaCvNxZ2KSLnqrBf1G6mXsShX-ZMdHwaIYYacx_VoN5ajg/viewform"
@@ -440,7 +764,7 @@
         <img src="logo.png" alt="Logo" style="height: 30px; margin-right: 15px; filter: brightness(0) invert(1);">
         PAHADI घोंसला
     </h2>
-    <p style="letter-spacing:4px; font-size:12px; margin-bottom:35px; color: var(--earth-brown);">BHIMTAL • UTTARAKHAND</p>
+    <p style="letter-spacing:4px; font-size:12px; margin-bottom:28px; color: var(--earth-brown);">BHIMTAL • UTTARAKHAND</p>
     
     <div class="premium-socials">
         <a href="https://www.instagram.com/rsrvillabhimtal" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
@@ -448,12 +772,12 @@
         <a href="https://wa.me/916398038550" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
 
-    <div style="margin-top:20px; font-size: 14px;">
-        <p style="margin-bottom: 10px;"><i class="fa fa-phone-alt" style="color:var(--earth-brown); margin-right:8px;"></i> <a href="tel:+919259370967">+91 92593 70967</a></p>
+    <div style="margin-top:18px; font-size: 14px;">
+        <p style="margin-bottom: 8px;"><i class="fa fa-phone-alt" style="color:var(--earth-brown); margin-right:8px;"></i> <a href="tel:+919259370967">+91 92593 70967</a></p>
         <p><i class="fab fa-whatsapp" style="color:var(--earth-brown); margin-right:8px;"></i> <a href="https://wa.me/916398038550">+91 63980 38550</a></p>
     </div>
 
-    <p style="margin-top:50px; font-size:11px; color: #aaa; letter-spacing: 1px;">© 2026 Pahadi घोंसला Bhimtal. Earthy Luxury stays.</p>
+    <p style="margin-top:38px; font-size:11px; color: #aaa; letter-spacing: 1px;">© 2026 Pahadi घोंसला Bhimtal. Earthy Luxury stays.</p>
 </footer>
 
 <a href="https://wa.me/916398038550" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -536,7 +860,7 @@
 
             publishedPosts.reverse().slice(0, 3).forEach(row => {
                 const imgHTML = row.Image ? 
-                  `<div style="height:200px; overflow:hidden;"><img src="${row.Image}" alt="${row.Title}" style="width:100%; height:100%; object-fit:cover;"></div>` : '';
+                  `<div style="height:200px; overflow:hidden;"><img src="\( {row.Image}" alt=" \){row.Title}" style="width:100%; height:100%; object-fit:cover;" loading="lazy"></div>` : '';
 
                 const card = `
                   <div class="luxury-card" style="padding:0; overflow:hidden; text-align:left;">
@@ -559,4 +883,3 @@
 
 </body>
 </html>
-
