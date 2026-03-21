@@ -5,46 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pahadi घोंसला | A Place to Pause in Bhimtal</title>
 
-    <meta name="description" content="Looking for a peaceful mountain retreat? Pahadi घोंसला is a premium earthy homestay near Bhimtal Lake & Kainchi Dham. Ideal for families, couples, and creative retreats. Book your safe stay today!">
+    <meta name="description" content="Looking for a peaceful mountain retreat? Pahadi घोंसला is a premium earthy homestay near Bhimtal Lake & Kainchi Dham. Ideal for families, couples, and creative retreats. Book your stay today!">
     
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LodgingBusiness",
-      "name": "Pahadi घोंसला Bhimtal",
-      "description": "Premium mountain view homestay near Kainchi Dham. Perfect for families, international tourists, yoga retreats, and creative workcations.",
-      "url": "https://rsrvilla.github.io/",
-      "priceRange": "₹2200 - ₹8000",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Bhimtal",
-        "addressRegion": "Uttarakhand",
-        "addressCountry": "IN"
-      }
-    }
-    </script>
-
     <link rel="icon" type="image/png" href="favicon.png"> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
 
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://rsrvilla.github.io/">
-    <meta property="og:title" content="Pahadi घोंसला | A Place to Pause">
-    <meta property="og:description" content="Experience peaceful mountain living at Pahadi घोंसला. Private luxury stay near Bhimtal Lake.">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
         :root {
-            /* Earthy & Nature-Inspired Theme Colors (Updated from Logo) */
-            --forest-green: #294936; /* Deep green from logo */
-            --earth-brown: #8B5A2B; /* Wood/Nest brown from logo */
-            --light-cream: #F9F6F0; /* Soft off-white for background */
+            /* Earthy & Nature-Inspired Theme Colors based on Logo */
+            --forest-green: #2a4b3c; /* Deep earthy green */
+            --earth-brown: #8b5a2b; /* Warm wood/nest brown */
+            --light-cream: #f7f5f0; /* Soft off-white for background */
             --white: #ffffff; 
-            --text-dark: #3e4a3d; /* Soft dark text */
-            --shadow-soft: 0 10px 30px rgba(41, 73, 54, 0.08);
-            --border-styled: 2px solid var(--earth-brown);
+            --text-dark: #333333; 
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -53,41 +29,39 @@
         /* HEADER */
         header {
             position: fixed; top: 0; width: 100%;
-            background: rgba(249, 246, 240, 0.98);
-            backdrop-filter: blur(10px);
+            background: rgba(247, 245, 240, 0.98);
             display: flex; justify-content: space-between; align-items: center;
             padding: 15px 60px; z-index: 1000;
             border-bottom: 1px solid rgba(139, 90, 43, 0.15);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
         }
         header h1 {
-            font-family: 'Playfair Display', serif; letter-spacing: 2px; font-size: 24px;
-            display: flex; align-items: center; justify-content: center; width: 100%;
+            font-family: 'Playfair Display', serif; font-size: 22px;
+            display: flex; align-items: center; justify-content: center;
         }
-        .header-logo-img { height: 25px; margin-right: 10px; }
+        .header-logo-img { height: 35px; margin-right: 10px; }
         .color-green { color: var(--forest-green); }
         .color-brown { color: var(--earth-brown); }
         
         header nav a {
-            margin: 0 15px; text-decoration: none; color: var(--text-dark);
-            font-weight: 700; font-size: 13px; text-transform: uppercase;
+            margin: 0 12px; text-decoration: none; color: var(--text-dark);
+            font-weight: 500; font-size: 12px; text-transform: uppercase;
             letter-spacing: 1px; transition: 0.3s;
         }
         header nav a:hover { color: var(--earth-brown); }
 
         /* HERO SECTION */
         .hero {
-            height: auto;
-            background: var(--light-cream);
+            height: 100vh;
+            background: var(--light-cream); /* Removed the bad image, keeping warm background */
             display: flex; align-items: center; justify-content: center; text-align: center;
-            padding-top: 40px; padding-bottom: 40px;
+            padding-top: 60px;
         }
         .hero-content {
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            display: flex; flex-direction: column; align-items: center;
         }
-        /* placeholder high-res full logo path standard_logo.png */
         .hero-logo {
-            width: 300px; max-width: 80%;
-            margin-bottom: 20px;
+            width: 280px; max-width: 80%; margin-bottom: 25px;
             animation: float 4s ease-in-out infinite;
         }
         @keyframes float {
@@ -95,218 +69,139 @@
             50% { transform: translateY(-10px); }
             100% { transform: translateY(0px); }
         }
-        .hero h2 { 
-            font-family: 'Playfair Display', serif; font-size: 28px; font-style: italic; 
-            color: var(--forest-green); margin-bottom: 10px; font-weight: 400;
-        }
-        .hero p { 
-            font-size: 15px; letter-spacing: 2px; text-transform: uppercase; 
-            margin-bottom: 30px; color: var(--earth-brown); font-weight: 500;
-        }
+        .hero h2 { font-family: 'Playfair Display', serif; font-size: 32px; font-style: italic; color: var(--forest-green); margin-bottom: 15px; font-weight: 400; }
         
-        /* BUTTONS */
         .cta-btn {
-            padding: 15px 40px; border: 2px solid var(--earth-brown); background: var(--earth-brown);
+            padding: 15px 40px; border: 1px solid var(--earth-brown); background: var(--earth-brown);
             color: white; text-transform: uppercase; letter-spacing: 2px; cursor: pointer;
-            transition: 0.4s; font-size: 12px; display: inline-block; text-decoration: none;
-            border-radius: 30px; font-weight: 600;
+            transition: 0.4s; font-size: 12px; display: inline-block; text-decoration: none; border-radius: 30px;
         }
         .cta-btn:hover { background: transparent; color: var(--earth-brown); }
 
         /* SECTION STYLING */
         section { padding: 90px 60px; max-width: 1400px; margin: auto; }
         .section-title {
-            text-align: center; font-family: 'Playfair Display', serif; font-size: 38px;
+            text-align: center; font-family: 'Playfair Display', serif; font-size: 36px;
             margin-bottom: 50px; font-weight: 400; color: var(--forest-green);
         }
         .section-title::after {
             content: ''; display: block; width: 50px; height: 2px; background: var(--earth-brown); margin: 20px auto; border-radius: 2px;
         }
 
-        /* AMENITIES SECTION */
-        .amenities-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 30px;
-            text-align: center;
-            margin-top: 40px;
-        }
-        .amenity-item { padding: 20px; text-align: center; border-radius: 12px; transition: 0.3s; }
-        .amenity-item:hover { background: rgba(139, 90, 43, 0.05); }
-        .amenity-item i { font-size: 35px; color: var(--earth-brown); margin-bottom: 15px; display: block; }
-        .amenity-item p { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; font-weight: 500; color: var(--forest-green); }
-
-        /* GALLERY - STACKED FLEX GRID */
-        .gallery {
-            display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;
-        }
-        .gallery-item {
-            break-inside: avoid;
-            margin-bottom: 20px;
-            position: relative; overflow: hidden; cursor: pointer; 
-            border-radius: 16px; border: none; box-shadow: var(--shadow-soft);
-            width: calc(33.333% - 20px); /* 3 columns with gap */
-            height: 300px; /* Fixed height for consistency */
-        }
-        .gallery img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.8s ease; }
+        /* GALLERIES */
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .gallery-item { position: relative; overflow: hidden; height: 350px; cursor: pointer; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
         .gallery-item:hover img { transform: scale(1.08); }
         .img-overlay {
             position: absolute; bottom: 0; left: 0; width: 100%; padding: 25px 20px;
-            background: linear-gradient(transparent, rgba(41, 73, 54, 0.95));
-            color: white; font-family: 'Playfair Display', serif; font-size: 18px; text-align: left;
+            background: linear-gradient(transparent, rgba(42, 75, 60, 0.9));
+            color: white; font-family: 'Playfair Display', serif; font-size: 18px;
         }
 
-        /* CARDS (Rooms & Attractions) */
-        .grid-container {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;
-        }
+        /* CARDS (Pricing & Nearby) */
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
         .luxury-card, .trust-item {
-            background: var(--white); padding: 45px 30px; text-align: center;
-            border-radius: 16px; transition: 0.4s; box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-            border: 1px solid rgba(139, 90, 43, 0.1);
+            background: var(--white); padding: 40px 25px; text-align: center;
+            border-radius: 12px; transition: 0.4s; border: 1px solid rgba(139, 90, 43, 0.1);
         }
-        .luxury-card:hover, .trust-item:hover { 
-            border-color: var(--earth-brown); transform: translateY(-8px); box-shadow: var(--shadow-soft); 
-        }
-        .luxury-card-title { font-family: 'Playfair Display', serif; font-size: 24px; margin: 10px 0 5px; color: var(--forest-green); text-align: center; }
-        .luxury-card-p { font-size: 14px; color: #666; margin-bottom: 15px; text-align: center; }
-        .trust-item h4 { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 15px; color: var(--forest-green); }
-        .price-tag { font-size: 20px; margin-top: 15px; display: block; font-weight: 600; color: var(--earth-brown); text-align: center; }
+        .luxury-card:hover, .trust-item:hover { border-color: var(--earth-brown); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(42, 75, 60, 0.08); }
+        .luxury-card h3 { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; color: var(--forest-green); }
+        .luxury-card p { font-size: 14px; color: #666; margin-bottom: 10px; }
+        .price-tag { font-size: 20px; margin-top: 15px; display: block; font-weight: 600; color: var(--earth-brown); }
+        .guest-info { font-size: 13px; color: var(--forest-green); font-style: italic; }
 
-        /* CONTACT & MAP FORM AREA */
-        .contact-box {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
-            background: var(--white); padding: 40px; border-radius: 20px; box-shadow: var(--shadow-soft);
-        }
-        
-        .premium-form-container {
-            display: flex; flex-direction: column; justify-content: center;
-            background: var(--light-cream); padding: 40px; border-radius: 16px;
-            text-align: center; border: var(--border-styled);
-        }
-        
-        .map-wrapper {
-            position: relative; border-radius: 16px; overflow: hidden;
-            border: var(--border-styled); height: 100%; min-height: 300px;
-            cursor: pointer;
-        }
-        .map-overlay {
-            position: absolute; inset: 0; background: rgba(41, 73, 54, 0.7);
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            color: white; opacity: 0; transition: 0.4s; z-index: 10;
-        }
-        .map-wrapper:hover .map-overlay { opacity: 1; }
-        .map-overlay i { font-size: 30px; margin-bottom: 10px; }
-        .map-wrapper iframe { width: 100%; height: 100%; border: none; }
+        /* AMENITIES */
+        .amenities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 30px; text-align: center; }
+        .amenity-item i { font-size: 35px; color: var(--earth-brown); margin-bottom: 15px; display: block; }
+        .amenity-item p { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; font-weight: 500; }
 
-        /* GUEST DIARIES & HOST */
-        .diary-card { 
-            background: var(--white); padding: 40px; border-radius: 16px; 
-            border-left: 4px solid var(--earth-brown); box-shadow: var(--shadow-soft); 
-        }
-        .stars { color: var(--earth-brown); margin-bottom: 15px; font-size: 16px; } 
-        .guest-name { color: var(--forest-green); font-weight: 600; display: block; margin-top: 15px; text-transform: uppercase; font-size: 12px; }
-        
-        .host-container {
-            display: flex; align-items: center; gap: 60px; background: var(--white);
-            padding: 50px; border-radius: 20px; box-shadow: var(--shadow-soft);
-        }
-        .host-image-container { flex: 1; min-width: 300px; border-radius: 16px; overflow: hidden; border: var(--border-styled); max-width: 100%; margin: 0 auto; text-align: center;}
-        .host-image { width: auto; max-width: 100%; height: 400px; object-fit: contain; }
+        /* HOST SECTION */
+        .host-container { display: flex; align-items: center; gap: 60px; background: var(--white); padding: 50px; border-radius: 16px; border: 1px solid rgba(139, 90, 43, 0.1); }
+        .host-image { flex: 1; min-width: 300px; height: 400px; }
+        .host-image img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
         .host-content { flex: 2; }
         .host-content h3 { font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 20px; color: var(--forest-green); }
 
-        /* LATEST UPDATE CARDS */
-        .news-card-mobile { display: flex; align-items: flex-start; gap: 20px; background: var(--white); padding: 25px; border-radius: 16px; box-shadow: var(--shadow-soft); }
-        .news-image-container-mobile { flex: 1; border-radius: 12px; overflow: hidden; border: var(--border-styled); max-width: 150px; height: 150px; }
-        .news-image-mobile { width: 100%; height: 100%; object-fit: cover; }
-        .news-content-mobile { flex: 2; display: flex; flex-direction: column; }
-        .news-textbox { font-size: 14px; color: #555; background: var(--light-cream); padding: 15px; border-radius: 10px; border: 1px dashed var(--earth-brown); margin-top: 10px; max-height: 100px; overflow-y: scroll;}
-        .news-read-more-btn { color: var(--earth-brown); font-weight: 600; font-size: 12px; text-transform: uppercase; cursor: pointer; text-decoration: none; margin-top: 5px; }
+        /* EXPERIENCES & DIARIES */
+        .exp-card { position: relative; height: 350px; overflow: hidden; border-radius: 12px; }
+        .exp-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s ease; }
+        .exp-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); display: flex; flex-direction: column; justify-content: flex-end; padding: 30px; color: white; }
+        .diary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .diary-card { background: var(--white); padding: 40px; border-radius: 12px; border-left: 4px solid var(--earth-brown); }
 
+        /* CONTACT FORM */
+        .contact-box { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; background: var(--white); padding: 40px; border-radius: 16px; border: 1px solid rgba(139, 90, 43, 0.1); }
+        
         /* FLOATING ACTION */
-        .whatsapp, .call {
-            position: fixed; right: 25px; width: 55px; height: 55px;
-            display: flex; align-items: center; justify-content: center;
-            border-radius: 50%; color: white; font-size: 24px; z-index: 999;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: 0.3s;
-        }
-        .whatsapp:hover, .call:hover { transform: scale(1.1); }
+        .whatsapp, .call { position: fixed; right: 25px; width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: white; font-size: 24px; z-index: 999; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
         .whatsapp { bottom: 95px; background: #25d366; }
         .call { bottom: 25px; background: var(--earth-brown); }
 
         /* FOOTER */
-        footer { 
-            background: var(--forest-green); color: var(--light-cream); 
-            padding: 80px 20px 100px; text-align: center; 
-        }
-        footer h2 { font-family: 'Playfair Display', serif; font-size: 32px; letter-spacing: 3px; margin-bottom: 20px; display: flex; justify-content: center; align-items: center;}
-        .color-light { color: var(--light-cream); }
-        .color-brown-footer { color:#d4a373; }
-        .premium-socials { display: flex; justify-content: center; gap: 30px; margin-bottom: 40px; }
-        .premium-socials a {
-            font-size: 25px; color: var(--light-cream);
-            width: 50px; height: 50px; border: 1px solid rgba(249, 246, 240, 0.3);
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            transition: 0.4s; text-decoration: none;
-        }
-        .premium-socials a:hover { background: var(--earth-brown); border-color: var(--earth-brown); transform: translateY(-5px); }
+        footer { background: var(--forest-green); color: var(--light-cream); padding: 80px 20px; text-align: center; }
+        footer h2 { font-family: 'Playfair Display', serif; font-size: 28px; letter-spacing: 3px; margin-bottom: 20px; display: flex; justify-content: center; align-items: center;}
+        footer a { color: inherit; text-decoration: none; }
+        .premium-socials { display: flex; justify-content: center; gap: 30px; margin-bottom: 30px; }
+        .premium-socials a { font-size: 24px; width: 45px; height: 45px; border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s; }
+        .premium-socials a:hover { background: var(--earth-brown); border-color: var(--earth-brown); }
 
         /* LIGHTBOX */
-        #lightbox {
-            display:none; position:fixed; top:0; left:0; width:100%; height:100%;
-            background:rgba(25, 30, 26, 0.95); align-items:center; justify-content:center; z-index:2000;
-        }
-        #lightbox img { max-width: 90%; max-height: 85%; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
-        .close { position:absolute; top:20px; right:40px; color:white; font-size:50px; cursor:pointer; font-weight: 300; }
-        .nav-btn {
-            position: absolute; top: 50%; transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.1); color: white; border: none; border-radius: 50%;
-            width: 60px; height: 60px; cursor: pointer; font-size: 24px; transition: 0.3s;
-        }
+        #lightbox { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(26, 36, 33, 0.95); align-items:center; justify-content:center; z-index:2000; }
+        #lightbox img { max-width: 90%; max-height: 85%; border-radius: 8px; }
+        .close { position:absolute; top:20px; right:30px; color:white; font-size:50px; cursor:pointer; font-weight: 300; }
+        .nav-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.1); color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 20px; transition: 0.3s; }
         .nav-btn:hover { background: var(--earth-brown); }
-        .prev-btn { left: 30px; }
-        .next-btn { right: 30px; }
+        .prev-btn { left: 20px; }
+        .next-btn { right: 20px; }
 
-        /* MOBILE RESPONSIVENESS */
+        /* --- PERFECT MOBILE RESPONSIVE GRIDS --- */
         @media (max-width: 768px) {
-            header { padding: 15px; flex-direction: column; gap: 15px; text-align: center; }
-            header nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; margin-top: 10px; width: 100%; }
-            header nav a { font-size: 11px; margin: 2px; padding: 5px; white-space: normal; text-align: center;}
-            section { padding: 70px 20px; }
-            
-            .hero { padding-top: 20px; padding-bottom: 20px; height: auto; }
-            .hero-logo { width: 200px; margin-bottom: 10px;}
-            .hero h2 { font-size: 22px; margin-bottom: 5px;}
-            .hero p { margin-bottom: 20px; }
-            
-            .amenities-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-            
-            .gallery-item {
-                columns: 2 150px;
-                column-gap: 10px;
-                width: calc(50% - 10px); /* 2 columns with gap */
-                height: 200px;
-                border-radius: 10px;
-            }
-            .img-overlay { position: relative; width: 100%; padding: 15px 10px; font-size: 14px; color: var(--forest-green); background: transparent; text-align: center;}
-            
-            /* Nearby Attractions Grid */
-            #nearby .grid-container {
-                grid-template-columns: 1fr 1fr; gap: 15px;
-            }
-            #nearby .luxury-card { padding: 25px 15px; }
-            #nearby .luxury-card-title { font-size: 18px; }
-            #nearby .luxury-card-p { font-size: 12px; }
+            header { padding: 10px 15px; flex-direction: column; gap: 10px; }
+            header nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; }
+            header nav a { font-size: 10px; margin: 2px 5px; }
+            section { padding: 60px 15px; }
 
-            .contact-box, .host-container { grid-template-columns: 1fr; padding: 25px; gap: 30px; }
-            .premium-form-container { padding: 30px 20px; }
-            .premium-form-container h3 { font-size: 22px; }
+            .hero h2 { font-size: 26px; }
+            .hero-logo { width: 220px; }
+
+            /* 2-Column Grid for Galleries */
+            .gallery { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .gallery-item { height: 180px; border-radius: 8px; }
+            .img-overlay { padding: 15px 10px; font-size: 12px; }
+
+            /* 2-Column Grid for Pricing & Nearby */
+            .grid-container { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .luxury-card, .trust-item { padding: 20px 10px; border-radius: 8px; }
+            .luxury-card h3 { font-size: 15px; margin-bottom: 5px; line-height: 1.3; }
+            .luxury-card p { font-size: 11px; margin-bottom: 5px; }
+            .price-tag { font-size: 15px; margin-top: 8px; }
+            .guest-info { font-size: 10px; }
             
-            .map-wrapper { height: 250px; min-height: auto; width: 100%; margin: 0 auto; max-width: 100%;}
-            .host-image-container { height: 300px; min-width: auto; max-width: 100%; margin: 0 auto;}
-            .host-image { height: 100%; }
-            .host-content h3 { font-size: 28px; }
+            .trust-item h4 { font-size: 16px; }
+            .trust-item p { font-size: 11px; }
+
+            /* 3-Column Grid for Amenities */
+            .amenities-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+            .amenity-item { padding: 10px; }
+            .amenity-item i { font-size: 24px; margin-bottom: 8px; }
+            .amenity-item p { font-size: 9px; }
+
+            /* Experiences & Diaries */
+            .experience-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .exp-card { height: 200px; }
+            .exp-card h4 { font-size: 16px; }
+            .exp-card p { font-size: 11px; }
+            .diary-card { padding: 20px; }
+
+            /* Host Image Fix (No Stretching) */
+            .host-container { flex-direction: column; padding: 25px 15px; text-align: center; }
+            .host-image { width: 100%; max-width: 250px; height: auto; min-width: auto; margin: 0 auto; }
+            .host-image img { aspect-ratio: 4/5; object-fit: cover; }
+            .host-content h3 { font-size: 24px; }
+
+            /* Contact */
+            .contact-box { grid-template-columns: 1fr; padding: 20px; gap: 20px; }
         }
     </style>
 </head>
@@ -314,30 +209,32 @@
 <body>
 
 <header>
-    <h1><img src="logo.png" alt="Logo" class="header-logo-img"><span class="color-green">Pahadi</span> <span class="color-brown">घोंसला</span></h1>
+    <h1>
+        <img src="logo.png" alt="Logo" class="header-logo-img">
+        <span class="color-green">Pahadi</span>&nbsp;<span class="color-brown">घोंसला</span>
+    </h1>
     <nav>
         <a href="#about">The Story</a>
         <a href="#villa">Inside the Nest</a>
         <a href="#surroundings">Around the Nest</a>
         <a href="#nearby">Beyond the Nest</a>
         <a href="#pricing">Reserve Your Stay</a>
-        <a href="#connect">Connect</a>
+        <a href="#contact">Connect</a>
     </nav>
 </header>
 
 <div class="hero">
     <div class="hero-content">
-        <img src="standard-logo.png" alt="Pahadi घोंसला Logo" class="hero-logo">
+        <img src="logo.png" alt="Pahadi Ghonsla Logo" class="hero-logo">
         <h2>A place to pause</h2>
-        <p>पहाड़ों की गोद में, आपका apni thikana</p>
-        <button class="cta-btn" onclick="document.getElementById('connect').scrollIntoView()">पधारो (Plan Your Stay)</button>
+        <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView()">Plan Your Stay</button>
     </div>
 </div>
 
 <section id="about">
-    <h2 class="section-title">Hamara घोंसला</h2>
-    <p style="text-align:center; max-width:850px; margin:auto; font-size:16px; color:var(--text-dark);">
-        Wake up to golden mountain sunlight and fresh Himalayan air. Pahadi घोंसला offers an earthy, peaceful, and private homestay experience in the heart of Bhimtal. Designed with rustic charm, spacious comfort, and breathtaking balcony views—this is your tranquil home away from home.
+    <h2 class="section-title">The Story</h2>
+    <p style="text-align:center; max-width:850px; margin:auto; font-weight:400; font-size:16px; color:#555;">
+        Wake up to golden mountain sunlight and fresh Himalayan air. Pahadi घोंसला offers an earthy, peaceful, and private homestay experience in the heart of Bhimtal. Designed with rustic charm, spacious comfort, and breathtaking balcony views—this is your tranquil home away from home in the hills.
     </p>
 </section> 
 
@@ -346,169 +243,217 @@
     <div class="amenities-grid">
         <div class="amenity-item"><i class="fa fa-wifi"></i><p>High Speed Wi-Fi</p></div>
         <div class="amenity-item"><i class="fa fa-car"></i><p>Private Parking</p></div>
-        <div class="amenity-item"><i class="fa fa-utensils"></i><p>Fully Equipped Kitchen</p></div>
-        <div class="amenity-item"><i class="fa fa-fire"></i><p>Geyser & Hot Water</p></div>
+        <div class="amenity-item"><i class="fa fa-utensils"></i><p>Equipped Kitchen</p></div>
+        <div class="amenity-item"><i class="fa fa-fire"></i><p>Hot Water</p></div>
         <div class="amenity-item"><i class="fa fa-paw"></i><p>Pet Friendly</p></div>
         <div class="amenity-item"><i class="fa fa-bolt"></i><p>Power Backup</p></div>
     </div>
 </section>
     
-<section id="villa">
+<section id="villa" style="background: var(--white);">
     <h2 class="section-title">Inside the Nest</h2>
     <div class="gallery">
         <div class="gallery-item" onclick="openLightbox('master')">
-            <img src="master1.jpg" alt="Kudrat Kutir">
+            <img src="master1.jpg" alt="Kudrat Kutir Room">
             <div class="img-overlay">Kudrat Kutir (कुदरत कुटीर)</div>
         </div>
         <div class="gallery-item" onclick="openLightbox('bed2')">
-            <img src="bedroom2-1.jpg" alt="Pyaar ke Panchhi">
+            <img src="bedroom2-1.jpg" alt="Pyaar ke Panchhi Room">
             <div class="img-overlay">Pyaar ke Panchhi (प्यार के पंछी)</div>
         </div>
         <div class="gallery-item" onclick="openLightbox('living')">
             <img src="living1.jpg" alt="Living Area">
-            <div class="img-overlay">The Gathering Space</div>
+            <div class="img-overlay">Living & Dining Area</div>
         </div>
         <div class="gallery-item" onclick="openLightbox('balcony')">
-            <img src="balcony1.jpg" alt="Balcony">
-            <div class="img-overlay">Balcony Views</div>
+            <img src="balcony1.jpg" alt="Balcony View">
+            <div class="img-overlay">Private Balcony View</div>
         </div>
     </div>
 </section>
 
-<section id="surroundings" style="background: var(--white);">
-    <h2 class="section-title">Around the Nest (पहाड़ी नज़ारे)</h2>
+<section id="surroundings">
+    <h2 class="section-title">Around the Nest</h2>
     <div class="gallery">
-        <div class="gallery-item" onclick="openLightbox('surround')"><img src="sur1.jpg" alt="Nature"></div>
-        <div class="gallery-item" onclick="openLightbox('surround')"><img src="sur2.jpg" alt="Mountains"></div>
-        <div class="gallery-item" onclick="openLightbox('surround')"><img src="sur3.jpg" alt="Peaceful Views"></div>
-        <div class="gallery-item" onclick="openLightbox('surround')"><img src="sur4.jpg" alt="Valley"></div>
+        <div class="gallery-item" onclick="openLightbox('surround')"><img src="sur1.jpg" alt="View 1"></div>
+        <div class="gallery-item" onclick="openLightbox('surround')"><img src="sur2.jpg" alt="View 2"></div>
+        <div class="gallery-item" onclick="openLightbox('surround')"><img src="sur3.jpg" alt="View 3"></div>
+        <div class="gallery-item" onclick="openLightbox('surround')"><img src="sur4.jpg" alt="View 4"></div>
     </div>
 </section>
 
-<section id="nearby">
-    <h2 class="section-title">Beyond the Nest (आस-पास)</h2>
+<section id="nearby" style="background: var(--white);">
+    <h2 class="section-title">Beyond the Nest</h2>
     <div class="grid-container">
-        <div class="luxury-card"><h3>Bhimtal Lake</h3><p>Boating and lakeside walks.</p></div>
-        <div class="luxury-card"><h3>Sattal</h3><p>Cluster of serene freshwater lakes.</p></div>
-        <div class="luxury-card"><h3>Naukuchiatal</h3><p>Paragliding and pine forests.</p></div>
-        <div class="luxury-card"><h3>Kainchi Dham</h3><p>A global spiritual retreat.</p></div>
+        <div class="luxury-card"><h3>Bhimtal Lake</h3><p>Boating and lakeside views minutes away.</p></div>
+        <div class="luxury-card"><h3>Sattal</h3><p>Serene interconnected freshwater lakes.</p></div>
+        <div class="luxury-card"><h3>Naukuchiatal</h3><p>Famous for paragliding and lake views.</p></div>
+        <div class="luxury-card"><h3>Kainchi Dham</h3><p>A global spiritual retreat and temple.</p></div>
     </div>
 </section>
 
-<section id="pricing" style="background: var(--white);">
-    <h2 class="section-title">Reserve Your Stay (अपना बसेरा चुनें)</h2>
+<section id="why-us">
+    <h2 class="section-title">Why Pahadi घोंसला?</h2>
     <div class="grid-container">
-        <div class="luxury-card">
-            <h3 class="luxury-card-title">Kudrat Kutir <br><span style="font-size:16px; color:#888;">(कुदरत कुटीर)</span></h3>
-            <p class="luxury-card-p">Cabin with Mountain view</p>
-            <p style="font-size:13px; font-style:italic; color:var(--forest-green);"><i class="fa fa-user-friends"></i> 2-4 guests</p>
-            <span class="price-tag">₹ 3500 / Night</span>
+        <div class="trust-item">
+            <i class="fa fa-shield-alt"></i>
+            <h4>Complete Privacy</h4>
+            <p>Entire villa with no interference. Perfect for families.</p>
         </div>
-        <div class="luxury-card">
-            <h3 class="luxury-card-title">Pyaar ke Panchhi <br><span style="font-size:16px; color:#888;">(प्यार के पंछी)</span></h3>
-            <p class="luxury-card-p">Couple's Nest</p>
-            <p style="font-size:13px; font-style:italic; color:var(--forest-green);"><i class="fa fa-heart"></i> Upto 2 Guests</p>
-            <span class="price-tag">₹ 2200 / Night</span>
+        <div class="trust-item">
+            <i class="fa fa-mountain"></i>
+            <h4>Mountain Views</h4>
+            <p>Every room opens to a stunning view of Bhimtal.</p>
         </div>
-        <div class="luxury-card">
-            <h3 class="luxury-card-title">Basera <br><span style="font-size:16px; color:#888;">(बसेरा)</span></h3>
-            <p class="luxury-card-p">The Cozy Cabin</p>
-            <p style="font-size:13px; font-style:italic; color:var(--forest-green);"><i class="fa fa-users"></i> Upto 3 guests</p>
-            <span class="price-tag">₹ 4000 / Night</span>
-        </div>
-        <div class="luxury-card">
-            <h3 class="luxury-card-title">Kutumb <br><span style="font-size:16px; color:#888;">(कुटूम्ब)</span></h3>
-            <p class="luxury-card-p">The Family Home (Complete Villa)</p>
-            <p style="font-size:13px; font-style:italic; color:var(--forest-green);"><i class="fa fa-home"></i> 4-7 guests</p>
-            <span class="price-tag">₹ 7000 / Night</span>
+        <div class="trust-item">
+            <i class="fa fa-heart"></i>
+            <h4>Warm Hospitality</h4>
+            <p>Experience authentic warmth with modern comforts.</p>
         </div>
     </div>
 </section>
 
-<section id="diaries">
-    <h2 class="section-title">Guest Diaries</h2>
-    <div class="diary-grid grid-container">
-        <div class="diary-card">
-            <div class="stars">★★★★★</div>
-            <p>"The best peaceful retreat in Bhimtal. The views are breathtaking!"</p>
-            <span class="guest-name">- Aman Sharma</span>
+<section id="experiences" style="background: var(--white);">
+    <h2 class="section-title">Curated Experiences</h2>
+    <div class="experience-grid">
+        <div class="exp-card">
+            <img src="sur1.jpg" alt="Bonfire"> 
+            <div class="exp-overlay">
+                <h4>Bonfire Nights</h4>
+                <p>Warmth & Starry Skies</p>
+            </div>
         </div>
-        <div class="diary-card">
-            <div class="stars">★★★★★</div>
-            <p>"Amazing hospitality and very clean rooms. Felt like a home away from home."</p>
-            <span class="guest-name">- Priya Verma</span>
+        <div class="exp-card">
+            <img src="sur2.jpg" alt="Trek"> 
+            <div class="exp-overlay">
+                <h4>Nature Walks</h4>
+                <p>Explore Hidden Trails</p>
+            </div>
+        </div>
+        <div class="exp-card">
+            <img src="sur3.jpg" alt="Food"> 
+            <div class="exp-overlay">
+                <h4>Kumaoni Flavors</h4>
+                <p>Home-Cooked Meals</p>
+            </div>
         </div>
     </div>
 </section>
 
 <section id="host">
     <div class="host-container">
-        <div class="host-image-container">
-            <img src="host-photo.jpg" alt="Host Picture" class="host-image"> 
+        <div class="host-image">
+            <img src="Ayaan.jpg" alt="Host of Pahadi घोंसला"> 
         </div>
         <div class="host-content">
-            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 12px; margin-bottom: 10px; color: var(--earth-brown);">Meet Your Host</p>
+            <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 11px; margin-bottom: 10px; color: var(--earth-brown);">Meet Your Host</p>
             <h3>A Personal Welcome</h3>
-            <p style="font-size: 15px; color: var(--text-dark); line-height: 1.8;">
-                "I started Pahadi घोंसला to share the peace of Bhimtal. Every corner is designed with care to ensure you create memories that last a lifetime. Ye aapka apna thikana hai."
+            <p style="font-size: 15px; color: #555; line-height: 1.8;">
+                "I started Pahadi घोंसला to share the peace of Bhimtal. Every corner is designed with care to ensure you create memories that last a lifetime."
             </p>
+            <p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 20px; margin-top: 20px; color: var(--earth-brown);">— Ayaan</p>
+        </div>
+    </div>
+</section>
+
+<section id="diaries" style="background: var(--white);">
+    <h2 class="section-title">Guest Diaries</h2>
+    <div class="grid-container">
+        <div class="diary-card">
+            <div style="color: var(--earth-brown); margin-bottom: 10px;">★★★★★</div>
+            <p style="font-style: italic; font-size: 14px; color: #555;">"The best peaceful retreat in Bhimtal. The views from the balcony are breathtaking!"</p>
+            <span style="display: block; margin-top: 15px; font-weight: 600; font-size: 11px; color: var(--forest-green);">- Aman Sharma</span>
+        </div>
+        <div class="diary-card">
+            <div style="color: var(--earth-brown); margin-bottom: 10px;">★★★★★</div>
+            <p style="font-style: italic; font-size: 14px; color: #555;">"Amazing hospitality and very clean rooms. Felt like a home away from home."</p>
+            <span style="display: block; margin-top: 15px; font-weight: 600; font-size: 11px; color: var(--forest-green);">- Priya Verma</span>
         </div>
     </div>
 </section>
 
 <section id="updates">
-    <h2 class="section-title">Latest Updates (From the Valley)</h2>
-    <div id="news-container" class="grid-container news-grid-mobile">
+    <h2 class="section-title">Latest from the Valley</h2>
+    <div id="news-container" class="grid-container">
         <p style="text-align:center; width:100%; color:#888;">Updating feed...</p>
     </div>
 </section>
     
-<section id="connect">
-    <h2 class="section-title">Connect (हमसे जुड़ें)</h2>
+<section id="pricing" style="background: var(--white);">
+    <h2 class="section-title">Reserve Your Stay</h2>
+    <div class="grid-container">
+        <div class="luxury-card">
+            <h3>Kudrat Kutir <br><span style="font-size:14px; color:#888;">(कुदरत कुटीर)</span></h3>
+            <p>Cabin with Mountain view</p>
+            <p class="guest-info"><i class="fa fa-users"></i> 2-4 guests</p>
+            <span class="price-tag">₹ 3500 / Night</span>
+        </div>
+        <div class="luxury-card">
+            <h3>Pyaar ke Panchhi <br><span style="font-size:14px; color:#888;">(प्यार के पंछी)</span></h3>
+            <p>Couple's Nest</p>
+            <p class="guest-info"><i class="fa fa-heart"></i> Upto 2 Guests</p>
+            <span class="price-tag">₹ 2200 / Night</span>
+        </div>
+        <div class="luxury-card">
+            <h3>Basera <br><span style="font-size:14px; color:#888;">(बसेरा)</span></h3>
+            <p>The Cozy Cabin (1 BHK)</p>
+            <p class="guest-info"><i class="fa fa-users"></i> Upto 3 guests</p>
+            <span class="price-tag">₹ 4000 / Night</span>
+        </div>
+        <div class="luxury-card">
+            <h3>Kutumb <br><span style="font-size:14px; color:#888;">(कुटूम्ब)</span></h3>
+            <p>The Family Home (2 BHK)</p>
+            <p class="guest-info"><i class="fa fa-home"></i> 4-7 guests</p>
+            <span class="price-tag">₹ 7000 / Night</span>
+        </div>
+    </div>
+</section>
+    
+<section id="contact">
+    <h2 class="section-title">Connect</h2>
     <div class="contact-box">
      
-        <div class="premium-form-container">
-            <h3 style="font-family:'Playfair Display',serif; color: var(--forest-green);">
-                तारीखें देखें <br>(Check Availability)
+        <div style="display:flex; flex-direction:column; justify-content:center; text-align: center; background: var(--light-cream); padding: 30px; border-radius: 12px; border: 1px dashed var(--earth-brown);">
+            <h3 style="font-family:'Playfair Display',serif; font-size:24px; margin-bottom:15px; color: var(--forest-green);">
+                Plan Your Stay
             </h3>
-            <p style="font-size:14px; color:#555; margin: 15px 0 25px;">
+            <p style="font-size:14px; color:#555; line-height:1.6; margin-bottom: 20px;">
                 Share your preferred dates and number of guests. We’ll prepare the nest for you.
             </p>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScuDaCvNxZ2KSLnqrBf1G6mXsShX-ZMdHwaIYYacx_VoN5ajg/viewform"
-               target="_blank" class="cta-btn">
-                Reserve Your Nest
+               target="_blank" class="cta-btn" style="margin: 0 auto;">
+                Check Availability
             </a>
         </div>
 
-        <a href="https://maps.app.goo.gl/husNt7VKXWBiLSG76" target="_blank" style="display:block; text-decoration:none;">
-            <div class="map-wrapper">
-                <div class="map-overlay">
-                    <i class="fa fa-map-marker-alt"></i>
-                    <span style="font-weight:600; font-size:18px; letter-spacing:1px;">Open in Maps</span>
-                </div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13964.673859664722!2d79.52843704999999!3d29.3524957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a09804b31a39a7%3A0xc6c769b76007e0b!2sBhimtal%2C%20Uttarakhand%20263136!5e0!3m2!1sen!2sin!4v1707038165768!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </a>
+        <div style="border-radius: 12px; overflow: hidden; border: 2px solid var(--earth-brown);">
+            <a href="https://www.google.com/maps/place/Bhimtal,+Uttarakhand+263136/@29.3524957,79.528437,13z" target="_blank" style="display:block; height: 100%;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13964.673859664722!2d79.52843704999999!3d29.3524957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a09804b31a39a7%3A0xc6c769b76007e0b!2sBhimtal%2C%20Uttarakhand%20263136!5e0!3m2!1sen!2sin!4v1707038165768!5m2!1sen!2sin" style="width:100%; height:100%; min-height: 250px; border:none; pointer-events: none; filter: grayscale(50%) sepia(20%);" allowfullscreen="" loading="lazy"></iframe>
+            </a>
+        </div>
 
     </div>
 </section>
 
 <footer>
-    <h2><span class="color-light">Pahadi</span> <span class="color-brown-footer">घोंसला</span></h2>
-    <p style="letter-spacing:4px; font-size:12px; margin-bottom:30px; opacity: 0.8;">A PLACE TO PAUSE • BHIMTAL</p>
+    <h2>
+        <img src="logo.png" alt="Logo" style="height: 30px; margin-right: 15px; filter: brightness(0) invert(1);">
+        PAHADI घोंसला
+    </h2>
+    <p style="letter-spacing:4px; font-size:12px; margin-bottom:35px; color: var(--earth-brown);">BHIMTAL • UTTARAKHAND</p>
     
     <div class="premium-socials">
-        <a href="https://www.instagram.com/rsrvillabhimtal" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/share/1DB4MS2V8e/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://wa.me/916398038550" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/rsrvillabhimtal" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/1DB4MS2V8e/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/916398038550" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
 
-    <div style="margin-top:20px; font-size: 15px;">
-        <p style="margin-bottom: 10px;"><i class="fa fa-phone-alt"></i> <a href="tel:+919259370967" style="color:white; text-decoration:none;">+91 92593 70967</a></p>
-        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/916398038550" style="color:white; text-decoration:none;">+91 63980 38550</a></p>
+    <div style="margin-top:20px; font-size: 14px;">
+        <p style="margin-bottom: 10px;"><i class="fa fa-phone-alt" style="color:var(--earth-brown); margin-right:8px;"></i> <a href="tel:+919259370967">+91 92593 70967</a></p>
+        <p><i class="fab fa-whatsapp" style="color:var(--earth-brown); margin-right:8px;"></i> <a href="https://wa.me/916398038550">+91 63980 38550</a></p>
     </div>
 
-    <p style="margin-top:50px; font-size:11px; opacity:0.5; letter-spacing: 1px;">© 2026 Pahadi घोंसला. Designed with love.</p>
+    <p style="margin-top:50px; font-size:11px; color: #aaa; letter-spacing: 1px;">© 2026 Pahadi घोंसला Bhimtal. Earthy Luxury stays.</p>
 </footer>
 
 <a href="https://wa.me/916398038550" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -539,8 +484,7 @@
         currentImgIndex = 0;
         const lightbox = document.getElementById("lightbox");
         lightbox.style.display = "flex";
-        const lightboxImg = document.getElementById("lightbox-img");
-        lightboxImg.src = currentGallerySet[currentImgIndex];
+        document.getElementById("lightbox-img").src = currentGallerySet[currentImgIndex];
         
         const prevBtn = document.querySelector(".prev-btn");
         const nextBtn = document.querySelector(".next-btn");
@@ -571,7 +515,6 @@
         }
     });
 
-    // Google Sheets public CSV link
     const sheetURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRQdmpCnTKsDakcUPYd0A8lIxdvB79lf1z_bSxwy1naITfLz6X3QDqq-kZ6QMH2CkA-fTx6c6UWsmvi/pub?gid=0&single=true&output=csv";
 
     Papa.parse(sheetURL, {
@@ -581,32 +524,27 @@
             const data = results.data;
             const container = document.getElementById('news-container');
             
-            // Filter: Rows where 'Publish' column is 'yes' and there's a Title
             const publishedPosts = data.filter(row => 
                 row.Title && row.Publish && row.Publish.toLowerCase().trim() === 'yes'
             );
 
-            // Handle output container based on filtering results
             if(publishedPosts.length > 0) {
                 container.innerHTML = ""; 
             } else {
                 container.innerHTML = "<p style='text-align:center; width:100%; color:#888;'>No new updates currently.</p>";
             }
 
-            // Show latest 3 published posts (reversed order)
             publishedPosts.reverse().slice(0, 3).forEach(row => {
                 const imgHTML = row.Image ? 
-                  `<div class="news-image-container-mobile"><img src="${row.Image}" alt="${row.Title}" class="news-image-mobile"></div>` : '';
+                  `<div style="height:200px; overflow:hidden;"><img src="${row.Image}" alt="${row.Title}" style="width:100%; height:100%; object-fit:cover;"></div>` : '';
 
                 const card = `
-                  <div class="news-card-mobile">
+                  <div class="luxury-card" style="padding:0; overflow:hidden; text-align:left;">
                     ${imgHTML}
-                    <div class="news-content-mobile">
-                      <span style="font-size:10px; color:var(--earth-brown); text-transform:uppercase; letter-spacing:1px; margin-bottom:5px;">${row.Date}</span>
-                      <h3 style="font-size:18px; margin: 0; color:var(--forest-green);">${row.Title}</h3>
-                      <p style="font-size:13px; color:#555; margin-top:5px;"> planning a visit...</p>
-                      <a href="#" class="news-read-more-btn">Read More</a>
-                      <div class="news-textbox"> planning a visit to Kainchi Dham... and all the rest of standard text.</div>
+                    <div style="padding: 20px;">
+                      <span style="font-size:10px; color:var(--earth-brown); text-transform:uppercase; letter-spacing:1px;">${row.Date}</span>
+                      <h3 style="font-size:18px; margin: 10px 0;">${row.Title}</h3>
+                      <p style="font-size:13px;">${row.Text}</p>
                     </div>
                   </div>
                 `;
@@ -614,7 +552,6 @@
             });
         },
         error: function() {
-            // Handle parsing or fetching errors gently
             document.getElementById('news-container').innerHTML = "<p style='text-align:center; width:100%; color:#888;'>Failed to load updates. Try reloading.</p>";
         }
     });
