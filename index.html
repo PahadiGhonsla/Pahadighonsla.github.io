@@ -37,13 +37,14 @@
 
     <style>
         :root {
-            /* Earthy & Nature-Inspired Theme Colors */
+            /* Earthy & Nature-Inspired Theme Colors (Updated from Logo) */
             --forest-green: #294936; /* Deep green from logo */
             --earth-brown: #8B5A2B; /* Wood/Nest brown from logo */
             --light-cream: #F9F6F0; /* Soft off-white for background */
             --white: #ffffff; 
-            --text-dark: #3e4a3d; /* Soft dark text instead of harsh black */
+            --text-dark: #3e4a3d; /* Soft dark text */
             --shadow-soft: 0 10px 30px rgba(41, 73, 54, 0.08);
+            --border-styled: 2px solid var(--earth-brown);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -52,16 +53,14 @@
         /* HEADER */
         header {
             position: fixed; top: 0; width: 100%;
-            background: rgba(249, 246, 240, 0.95);
+            background: rgba(249, 246, 240, 0.98);
             backdrop-filter: blur(10px);
             display: flex; justify-content: space-between; align-items: center;
             padding: 20px 60px; z-index: 1000;
             border-bottom: 1px solid rgba(139, 90, 43, 0.15);
         }
         header h1 {
-            font-family: 'Playfair Display', serif;
-            letter-spacing: 2px;
-            font-size: 24px;
+            font-family: 'Playfair Display', serif; letter-spacing: 2px; font-size: 24px;
         }
         .color-green { color: var(--forest-green); }
         .color-brown { color: var(--earth-brown); }
@@ -78,11 +77,12 @@
             height: 100vh;
             background: var(--light-cream);
             display: flex; align-items: center; justify-content: center; text-align: center;
-            padding-top: 80px;
+            padding-top: 80px; /* Offset for fixed header */
         }
         .hero-content {
-            display: flex; flex-direction: column; align-items: center;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
         }
+        /* Ensure a standard logo file path is used. Use standard_logo.png as placeholder */
         .hero-logo {
             width: 350px; max-width: 80%;
             margin-bottom: 30px;
@@ -121,27 +121,40 @@
             content: ''; display: block; width: 50px; height: 2px; background: var(--earth-brown); margin: 20px auto; border-radius: 2px;
         }
 
-        /* VERTICAL / MASONRY GALLERY */
+        /* AMENITIES SECTION */
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .amenity-item { padding: 20px; text-align: center; border-radius: 12px; transition: 0.3s; }
+        .amenity-item:hover { background: rgba(139, 90, 43, 0.05); }
+        .amenity-item i { font-size: 35px; color: var(--earth-brown); margin-bottom: 15px; display: block; }
+        .amenity-item p { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; font-weight: 500; color: var(--forest-green); }
+
+        /* GALLERY - STACKED FLEX GRID */
         .gallery {
-            columns: 3 300px;
-            column-gap: 20px;
+            display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;
         }
         .gallery-item {
-            break-inside: avoid; margin-bottom: 20px;
             position: relative; overflow: hidden; cursor: pointer; 
             border-radius: 16px; border: none; box-shadow: var(--shadow-soft);
+            width: calc(33.333% - 20px); /* 3 columns with gap */
+            height: 300px; /* Fixed height for consistency */
         }
-        .gallery img { width: 100%; display: block; transition: transform 0.8s ease; }
+        .gallery img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.8s ease; }
         .gallery-item:hover img { transform: scale(1.08); }
         .img-overlay {
             position: absolute; bottom: 0; left: 0; width: 100%; padding: 25px 20px;
-            background: linear-gradient(transparent, rgba(41, 73, 54, 0.9));
-            color: white; font-family: 'Playfair Display', serif; font-size: 18px;
+            background: linear-gradient(transparent, rgba(41, 73, 54, 0.95));
+            color: white; font-family: 'Playfair Display', serif; font-size: 18px; text-align: left;
         }
 
         /* CARDS (Rooms & Attractions) */
         .grid-container {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;
         }
         .luxury-card, .trust-item {
             background: var(--white); padding: 45px 30px; text-align: center;
@@ -151,10 +164,10 @@
         .luxury-card:hover, .trust-item:hover { 
             border-color: var(--earth-brown); transform: translateY(-8px); box-shadow: var(--shadow-soft); 
         }
-        .luxury-card h3 { font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 10px; color: var(--forest-green); }
-        .luxury-card p { font-size: 14px; color: #666; margin-bottom: 15px; }
+        .luxury-card h3 { font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 10px; color: var(--forest-green); text-align: center; }
+        .luxury-card p { font-size: 14px; color: #666; margin-bottom: 15px; text-align: center; }
         .trust-item h4 { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 15px; color: var(--forest-green); }
-        .price-tag { font-size: 20px; margin-top: 15px; display: block; font-weight: 600; color: var(--earth-brown); }
+        .price-tag { font-size: 20px; margin-top: 15px; display: block; font-weight: 600; color: var(--earth-brown); text-align: center; }
 
         /* CONTACT & MAP FORM AREA */
         .contact-box {
@@ -165,37 +178,36 @@
         .premium-form-container {
             display: flex; flex-direction: column; justify-content: center;
             background: var(--light-cream); padding: 40px; border-radius: 16px;
-            text-align: center; border: 1px dashed var(--earth-brown);
+            text-align: center; border: var(--border-styled);
         }
         
         .map-wrapper {
             position: relative; border-radius: 16px; overflow: hidden;
-            border: 2px solid var(--earth-brown); height: 100%; min-height: 300px;
+            border: var(--border-styled); height: 100%; min-height: 300px;
             cursor: pointer;
         }
         .map-overlay {
-            position: absolute; inset: 0; background: rgba(41, 73, 54, 0.6);
+            position: absolute; inset: 0; background: rgba(41, 73, 54, 0.7);
             display: flex; flex-direction: column; align-items: center; justify-content: center;
             color: white; opacity: 0; transition: 0.4s; z-index: 10;
         }
         .map-wrapper:hover .map-overlay { opacity: 1; }
         .map-overlay i { font-size: 30px; margin-bottom: 10px; }
-        .map-wrapper iframe { width: 100%; height: 100%; border: none; pointer-events: none; filter: grayscale(50%) sepia(20%); }
+        .map-wrapper iframe { width: 100%; height: 100%; border: none; filter: grayscale(50%) sepia(20%); }
 
-        /* ICONS */
-        .trust-item i, .amenity-item i { font-size: 35px; color: var(--earth-brown); margin-bottom: 20px; display: block; }
-        
         /* GUEST DIARIES & HOST */
         .diary-card { 
             background: var(--white); padding: 40px; border-radius: 16px; 
             border-left: 4px solid var(--earth-brown); box-shadow: var(--shadow-soft); 
         }
         .stars { color: var(--earth-brown); margin-bottom: 15px; font-size: 16px; } 
+        .guest-name { color: var(--forest-green); font-weight: 600; display: block; margin-top: 15px; text-transform: uppercase; font-size: 12px; }
+        
         .host-container {
             display: flex; align-items: center; gap: 60px; background: var(--white);
             padding: 50px; border-radius: 20px; box-shadow: var(--shadow-soft);
         }
-        .host-image { flex: 1; min-width: 300px; height: 400px; border-radius: 16px; overflow: hidden; }
+        .host-image { flex: 1; min-width: 300px; height: 400px; border-radius: 16px; overflow: hidden; border: var(--border-styled); }
         .host-image img { width: 100%; height: 100%; object-fit: cover; }
         .host-content { flex: 2; }
         .host-content h3 { font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 20px; color: var(--forest-green); }
@@ -210,6 +222,22 @@
         .whatsapp:hover, .call:hover { transform: scale(1.1); }
         .whatsapp { bottom: 95px; background: #25d366; }
         .call { bottom: 25px; background: var(--earth-brown); }
+
+        /* FOOTER */
+        footer { 
+            background: var(--forest-green); color: var(--light-cream); 
+            padding: 80px 20px 100px; text-align: center; 
+        }
+        footer h2 { font-family: 'Playfair Display', serif; color: var(--light-cream); font-size: 32px; letter-spacing: 3px; margin-bottom: 20px; }
+        .color-light { color: var(--light-cream); }
+        .premium-socials { display: flex; justify-content: center; gap: 30px; margin-bottom: 40px; }
+        .premium-socials a {
+            font-size: 25px; color: var(--light-cream);
+            width: 50px; height: 50px; border: 1px solid rgba(249, 246, 240, 0.3);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            transition: 0.4s; text-decoration: none;
+        }
+        .premium-socials a:hover { background: var(--earth-brown); border-color: var(--earth-brown); transform: translateY(-5px); }
 
         /* LIGHTBOX */
         #lightbox {
@@ -227,46 +255,40 @@
         .prev-btn { left: 30px; }
         .next-btn { right: 30px; }
 
-        /* FOOTER */
-        footer { 
-            background: var(--forest-green); color: var(--light-cream); 
-            padding: 80px 20px 100px; text-align: center; 
-        }
-        footer h2 { font-family: 'Playfair Display', serif; color: var(--light-cream); font-size: 32px; letter-spacing: 3px; margin-bottom: 20px; }
-        .premium-socials { display: flex; justify-content: center; gap: 30px; margin-bottom: 40px; }
-        .premium-socials a {
-            font-size: 25px; color: var(--light-cream);
-            width: 50px; height: 50px; border: 1px solid rgba(249, 246, 240, 0.3);
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            transition: 0.4s; text-decoration: none;
-        }
-        .premium-socials a:hover { background: var(--earth-brown); border-color: var(--earth-brown); transform: translateY(-5px); }
-
         /* MOBILE RESPONSIVENESS */
         @media (max-width: 768px) {
-            header { padding: 15px; flex-direction: column; gap: 15px; }
-            header nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-            header nav a { font-size: 11px; margin: 0; }
+            header { padding: 15px; flex-direction: column; gap: 15px; text-align: center; }
+            header nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; margin-top: 10px; width: 100%; }
+            header nav a { font-size: 11px; margin: 2px; padding: 5px; white-space: normal; text-align: center;}
             section { padding: 70px 20px; }
             
             .hero-logo { width: 250px; }
             .hero h2 { font-size: 22px; }
             
-            .gallery { columns: 2 150px; column-gap: 10px; }
-            .gallery-item { margin-bottom: 10px; border-radius: 10px; }
+            .amenities-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            
+            .gallery-item {
+                width: calc(50% - 10px); /* 2 columns with gap */
+                height: 200px;
+                border-radius: 10px;
+            }
             .img-overlay { padding: 15px 10px; font-size: 14px; }
             
-            /* Mobile Specific: Beyond The Nest Thin Grid */
+            /* Nearby Attractions Grid */
             #nearby .grid-container {
-                grid-template-columns: 1fr 1fr; /* 2 columns for thin layout */
-                gap: 15px;
+                grid-template-columns: 1fr 1fr; gap: 15px;
             }
             #nearby .luxury-card { padding: 25px 15px; }
             #nearby .luxury-card h3 { font-size: 18px; }
             #nearby .luxury-card p { font-size: 12px; }
 
             .contact-box, .host-container { grid-template-columns: 1fr; padding: 25px; gap: 30px; }
-            .map-wrapper { height: 250px; min-height: auto; }
+            .premium-form-container { padding: 30px 20px; }
+            .premium-form-container h3 { font-size: 22px; }
+            
+            .map-wrapper { height: 250px; min-height: auto; width: 100%; margin: 0 auto; max-width: 100%;}
+            .host-image { height: 300px; min-width: auto; max-width: 320px; margin: 0 auto;}
+            .host-content h3 { font-size: 28px; }
         }
     </style>
 </head>
@@ -281,7 +303,7 @@
         <a href="#surroundings">Around the Nest</a>
         <a href="#nearby">Beyond the Nest</a>
         <a href="#pricing">Reserve Your Stay</a>
-        <a href="#contact">Connect</a>
+        <a href="#connect">Connect</a>
     </nav>
 </header>
 
@@ -290,7 +312,7 @@
         <img src="logo.png" alt="Pahadi घोंसला Logo" class="hero-logo">
         <h2>A place to pause</h2>
         <p>पहाड़ों की गोद में, आपका अपना ठिकाना</p>
-        <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView()">पधारो (Plan Your Stay)</button>
+        <button class="cta-btn" onclick="document.getElementById('connect').scrollIntoView()">पधारो (Plan Your Stay)</button>
     </div>
 </div>
 
@@ -299,19 +321,19 @@
     <p style="text-align:center; max-width:850px; margin:auto; font-size:16px; color:var(--text-dark);">
         Wake up to golden mountain sunlight and fresh Himalayan air. Pahadi घोंसला offers an earthy, peaceful, and private homestay experience in the heart of Bhimtal. Designed with rustic charm, spacious comfort, and breathtaking balcony views—this is your tranquil home away from home.
     </p>
-    
-    <div style="display:flex; justify-content:center; gap:40px; margin-top:50px; flex-wrap:wrap;">
-        <div class="trust-item" style="border:none; box-shadow:none; background:transparent;">
-            <i class="fa fa-leaf"></i><h4>Earthy Retreat</h4>
-        </div>
-        <div class="trust-item" style="border:none; box-shadow:none; background:transparent;">
-            <i class="fa fa-wind"></i><h4>Fresh Mountain Air</h4>
-        </div>
-        <div class="trust-item" style="border:none; box-shadow:none; background:transparent;">
-            <i class="fa fa-mug-hot"></i><h4>Cozy Comforts</h4>
-        </div>
-    </div>
 </section> 
+
+<section id="amenities" style="background: var(--white); border-top: 1px solid #eee;">
+    <h2 class="section-title">Essential Comforts</h2>
+    <div class="amenities-grid">
+        <div class="amenity-item"><i class="fa fa-wifi"></i><p>High Speed Wi-Fi</p></div>
+        <div class="amenity-item"><i class="fa fa-car"></i><p>Private Parking</p></div>
+        <div class="amenity-item"><i class="fa fa-utensils"></i><p>Fully Equipped Kitchen</p></div>
+        <div class="amenity-item"><i class="fa fa-fire"></i><p>Geyser & Hot Water</p></div>
+        <div class="amenity-item"><i class="fa fa-paw"></i><p>Pet Friendly</p></div>
+        <div class="amenity-item"><i class="fa fa-bolt"></i><p>Power Backup</p></div>
+    </div>
+</section>
     
 <section id="villa">
     <h2 class="section-title">Inside the Nest</h2>
@@ -385,6 +407,22 @@
     </div>
 </section>
 
+<section id="diaries">
+    <h2 class="section-title">Guest Diaries</h2>
+    <div class="diary-grid grid-container">
+        <div class="diary-card">
+            <div class="stars">★★★★★</div>
+            <p>"The best peaceful retreat in Bhimtal. The views are breathtaking!"</p>
+            <span class="guest-name">- Aman Sharma</span>
+        </div>
+        <div class="diary-card">
+            <div class="stars">★★★★★</div>
+            <p>"Amazing hospitality and very clean rooms. Felt like a home away from home."</p>
+            <span class="guest-name">- Priya Verma</span>
+        </div>
+    </div>
+</section>
+
 <section id="host">
     <div class="host-container">
         <div class="host-image">
@@ -400,15 +438,15 @@
     </div>
 </section>
     
-<section id="contact">
+<section id="connect">
     <h2 class="section-title">Connect (हमसे जुड़ें)</h2>
     <div class="contact-box">
      
         <div class="premium-form-container">
-            <h3 style="font-family:'Playfair Display',serif; font-size:26px; margin-bottom:15px; color: var(--forest-green);">
+            <h3 style="font-family:'Playfair Display',serif; color: var(--forest-green);">
                 तारीखें देखें <br>(Check Availability)
             </h3>
-            <p style="font-size:14px; color:#555; margin-bottom: 25px;">
+            <p style="font-size:14px; color:#555; margin: 15px 0 25px;">
                 Share your preferred dates and number of guests. We’ll prepare the nest for you.
             </p>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScuDaCvNxZ2KSLnqrBf1G6mXsShX-ZMdHwaIYYacx_VoN5ajg/viewform"
@@ -431,7 +469,7 @@
 </section>
 
 <footer>
-    <h2><span class="color-light">Pahadi</span> <span class="color-brown" style="color:#d4a373;">घोंसला</span></h2>
+    <h2><span class="color-light">Pahadi</span> <span style="color:#d4a373;">घोंसला</span></h2>
     <p style="letter-spacing:4px; font-size:12px; margin-bottom:30px; opacity: 0.8;">A PLACE TO PAUSE • BHIMTAL</p>
     
     <div class="premium-socials">
